@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>      
+      
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+                .mickson {
+                 display: flex;
+                 flex-direction: column;
+                 gap: 8px;
+                 height: 600px;
+                 margin: 10px 16px;
+                 width: 45%;
+                 border-radius: 10px;
+                 background-color: rgb(40, 18, 160);
+                 padding: 20px;                        
+                }
+                form{
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px
+                }
+                .container{
+                 display: flex;
+                 height: 100px;
+                 width: 76%;
+                 align-items: center;
+                 border-radius: 10px;
+                 flex-direction: column;
+                 background-image: url(./images/Liblary.jpg);
+                 background-size: 250px;
+                 padding:50px;
+                }
+                .acah{
+                 display: flex;
+                 flex-direction: column;
+                 height: 300px;
+                 width: 30%;
+                 margin: 10px 3px;
+                 border-radius: 10px;
+                 background-color: rgb(167, 18, 105);
+                 background-size: 60px;
+                 padding: 15px;
+                }
+
+                .input_field{
+                display:flex;
+                flex-direction: column;
+
+                height: 30px;
+                width: 90%;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                }
+                .option{
+                  height:40px;
+                  width: 90%;
+                  border-radius: 10px;
+                  outline: none;
+                }
+                .single{
+                gap: 10px;
+                border-radius: 10px;
+                }
+              
+                button{
+                 background-color: green;
+                 color: white;
+                 align-items: center;
+               }
+                body{
+                font-family: "Poppins", sans-serif;
+                gap:10px
+               }
+        </style>
+</head>
+
+<body>
+   <form>
+     <div class="container">
+        <h1 style="text-decoration-color: rgb(43, 226, 67);">LIBRARY SURVEY</h1>
+        <P class="input">Help us improve your local library</P>
+     </div>  
+
+<div style="display: flex; flex-direction:row; gap:10px;">
+
+     <div class="acah">
+      <i class="fa-solid fa-user" style="display: flex; flex-direction: column; align-items: center; size:30px;"></i>
+        <h2 style="display: flex; flex-direction:column;align-items: center; font-size: 25px;">Personal detail</h2>
+     
+        <label for="name">Name</label>
+        <input id="name" type="text" class="input_field" placeholder="Enter your name">
+
+        <label for="email">Email Address</label>
+        <input id="email" type="email" class="input_field" placeholder="Enter your email address">
+
+        <label for="number">Age</label>
+        <input id="number" type="number" class="input_field" placeholder="Enter your age">
+     </div>
+               
+   <div class="mickson" style="display: flex; flex-direction: column;">
+    <i class="fa-sharp fa-solid fa-square-info"></i>
+        <h3 style="font-size: 40px; text-shadow: burlywood;">General Information</h3>
+
+     <div  class="single">
+        <label for="visiting the liblary"  class="survey">How often do you visit the library</label>
+       
+       </div>
+
+       <div class="single">
+        <select name="How often do you visit the library"class="option" id="How often do you visit the library">
+         <option value="dairy">select</option>
+         <option value="dairy">daily</option>
+         <option value="dairy">weekly</option>
+         <option value="dairy">rarely</option>
+         <option value="dairy">never</option>
+        </div> 
+      </select>
+
+       <div class="single">
+        <label for="availability">When you visit, are you usually able to find what you are looking for??</label>
+      </div>
+
+        <div class="single">
+            <input type="radio" name="often" id="always">
+            <label for="always">Always</label>
+        </div>
+
+     <div class="single">
+        <input type="radio" name="often" id="sometimes">
+        <label for="sometimes">Sometimes</label>
+      </div>
+
+      <div class="single">
+        <input type="radio" name="often" id="rarely">
+        <label for="rarely">Rarely</label>
+      </div>
+
+      <div class="single">
+        <input type="radio" name="often" id="never">
+        <label for="never">Never</label>
+      </div>
+
+        <label>please check on the reason why you visit the library</label>
+
+      <div class="single">
+        <input type="checkbox" name="reasons" id="to checkout">
+        <label for="to checkout">To checkout</label>
+      </div>
+
+      <div class="single">
+        <input type="checkbox" name="reasons" id="to use computers">
+        <label for="to use computers">To use computers</label>
+      </div>
+
+      <div class="single">
+        <input type="checkbox" name="reasons" id="to get a book recommendation">
+        <label for="to get a book recommendation">To get a book recommendation</label>
+      </div>
+
+      <div class="single">
+        <input type="checkbox" name="reasons" id="to do research">
+        <label for="to do research">To do research</label>
+      </div>
+       
+        <label>Anything you would like to improve?</label>
+        <textarea name="message" id="message" class=imput_field cols="3" placeholder="Type here"    rows="4" style="width:90%; border-radius: 10px;"></textarea>
+
+      <div class="single">
+        <button id="Submit_btn" class="input_field">Submit</button>
+      </div> 
+
+  </div>
+</div> 
+   </form>
+
+</body>
+</html>
